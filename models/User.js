@@ -39,8 +39,10 @@ module.exports = (sequelize, DataTypes) => {
         db.User.hasMany(db.Post, {
             foreignKey: {
                 name: 'fk_user_id',
+                // 로그인 안된 상태에서는 게시글 작성이 불가능하다.
                 allowNull: false
             },
+            // 유저가 삭제되면 게시글 같이 삭제된다.
             onDelete: 'cascade',
         })
 
@@ -48,8 +50,10 @@ module.exports = (sequelize, DataTypes) => {
         db.User.hasMany(db.Comment, {
             foreignKey: {
                 name: 'fk_user_id',
+                // 로그인 안된 상태어세는 댓글 작성이 불가능하다.
                 allowNull: false
             },
+            // 유저가 삭제되면 댓글 같이 삭제된다.
             onDelete: 'cascade',
         })
     }

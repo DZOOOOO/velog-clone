@@ -1,5 +1,5 @@
 ## 프로젝트 시연 동영상
-youtube.com/watch?v=boRrppF0opE&t=83s
+https://youtube.com/watch?v=boRrppF0opE&t=83s
 
 ## 🔨사용한 기술 스택
 
